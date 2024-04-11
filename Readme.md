@@ -41,11 +41,17 @@ Debugger Server:
 scp A64Dbg/a64dbg-server.deb root@ip:/tmp/
 ssh root@ip dpkg -i --force-overwrite /tmp/a64dbg-server.deb
 ```
+ * iOS user: an extra step to install injection framework [Textobot.deb](https://github.com/vpand/A64Dbg/blob/master/Textobot.deb) to iDevice
+```
+scp A64Dbg/Textobot.deb root@ip:/tmp/
+ssh root@ip dpkg -i --force-overwrite /tmp/Textobot.deb
+```
  * iOS uvmdbg user: install the extra [a64dbg-server.uvm.deb](https://github.com/vpand/A64Dbg/blob/master/a64dbg-server.uvm.deb) to iDevice
 ```
 scp A64Dbg/a64dbg-server.uvm.deb root@ip:/tmp/
 ssh root@ip dpkg -i --force-overwrite /tmp/a64dbg-server.uvm.deb
 ```
+
  * Android user: push [a64dbg-server-arm64](https://github.com/vpand/A64Dbg/tree/master/a64dbg-server-arm64) to Android Device
 ```
 adb push A64Dbg/a64dbg-server-arm64 /data/local/tmp/
