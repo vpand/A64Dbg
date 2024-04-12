@@ -55,7 +55,7 @@ ssh root@ip dpkg -i --force-overwrite /tmp/a64dbg-server.uvm.deb
  * Android user: push [a64dbg-server-arm64](https://github.com/vpand/A64Dbg/tree/master/a64dbg-server-arm64) to Android Device
 ```
 adb push A64Dbg/a64dbg-server-arm64 /data/local/tmp/
-adb shell chmod -R 755 /data/local/tmp/a64dbg-server-arm64/
+adb shell chmod -R 755 /data/local/tmp/a64dbg-server-arm64
 cd /data/local/tmp/a64dbg-server-arm64; ./a64dbg-server&
 ```
 ```
@@ -64,6 +64,7 @@ adb forward tcp:30333 tcp:30333
  * Android uvmdbg user: push the extra [a64dbg-server-arm64.uvm](https://github.com/vpand/A64Dbg/tree/master/a64dbg-server-arm64.uvm) to Android Device and turn off SELinux
 ```
 adb push A64Dbg/a64dbg-server-arm64.uvm /data/local/tmp/
+adb shell chmod -R 755 /data/local/tmp/a64dbg-server-arm64.uvm
 setenforce 0
 ```
  * On Android, if you want to launch APK using uvmdbg, you should have Magisk root, and install [Riru ADZygote](https://github.com/vpand/A64Dbg/tree/master/launch-apk)
